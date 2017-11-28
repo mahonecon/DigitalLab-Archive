@@ -1,0 +1,36 @@
+Active-HDL 9.3.2744.4995  2017-09-26 6:44:36 PM
+
+Elaboration top modules:
+Architecture                  BENCH(fullAdder_TB)
+
+
+-------------------------------------------------------------------------------------------------
+Entity       | Architecture | Library    | Info | Compiler Version         | Compilation Options
+-------------------------------------------------------------------------------------------------
+fullAdder_TB | BENCH        | fulladder1 |      | 9.3.2744.4995  (Windows) | -O3
+fullAdder    | fulladder    | fulladder1 |      | 9.3.2744.4995  (Windows) | -O3
+xor2         | xor2_v       | artix7     |      | 9.3.2744.4995  (Windows) | -vendor xilinx
+and2         | and2_v       | artix7     |      | 9.3.2744.4995  (Windows) | -vendor xilinx
+or2          | or2_v        | artix7     |      | 9.3.2744.4995  (Windows) | -vendor xilinx
+-------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------
+VHDL Package                | Library    | Info | Compiler Version         | Compilation Options
+-------------------------------------------------------------------------------------------------
+standard                    | std        |      |                          | 
+TEXTIO                      | std        |      | 9.3.2744.4995  (Windows) |  -2008
+std_logic_1164              | ieee       |      | 9.3.2744.4995  (Windows) |  -2008
+std_logic_arith             | ieee       |      | 9.3.2744.4995  (Windows) | 
+STD_LOGIC_UNSIGNED          | ieee       |      | 9.3.2744.4995  (Windows) | 
+VITAL_Timing                | ieee       |      | 9.3.2744.4995  (Windows) | 
+STD_LOGIC_SIGNED            | ieee       |      | 9.3.2744.4995  (Windows) | 
+-------------------------------------------------------------------------------------------------
+
+-------------------------------------------------------------------------------------------------
+Library                     | Comment
+-------------------------------------------------------------------------------------------------
+artix7                      | XILINX ISE 14.6, VIRTEX7, KINTEX7, ARTIX7, ZYNQ SCHEMATIC LIBRARY
+fulladder1                  | None
+ieee                        | Standard IEEE packages library
+std                         | Standard VHDL library
+-------------------------------------------------------------------------------------------------

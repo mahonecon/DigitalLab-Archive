@@ -1,0 +1,405 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<HTML>
+
+<!----------------------------------------------------------------------------->
+<!--                          BEGIN HTML HEAD                                -->
+<!--                                                                         -->
+
+<HEAD>
+<TITLE>Synthesis&nbsp;Log</TITLE>
+<STYLE>
+.Err	{color:'#FF0000';cursor:hand;text-decoration:underline;}
+.Warn	{color:'#0000FF';cursor:hand;text-decoration:underline;}
+.Info	{color:'#000000';cursor:hand;text-decoration:underline;}
+.ErrH	{color:'#FF0000';cursor:hand;text-decoration:underline;}
+.WarnH	{color:'#0000FF';cursor:hand;text-decoration:underline;}
+.InfoH	{color:'#000000';cursor:hand;text-decoration:underline;}
+.Err1	{color:'#FF0000';}
+.Warn1	{color:'#0000FF';}
+.Info1	{color:'#000000';}
+</STYLE>
+</HEAD>
+<BODY BGCOLOR="white" TEXT="black" LINK="blue" VLINK="purple" BACKGROUND="C:\Aldec\Active-HDL 9.3\Flows\Res\default.bmp">
+<FONT FACE="Courier New" SIZE=2>
+
+<!--                                                                         -->
+<!--                             END HEADER                                  -->
+<!----------------------------------------------------------------------------->
+
+<!----------------------------------------------------------------------------->
+<!--                            BEGIN VBSCRIPT                               -->
+<!--                                                                         -->
+<SCRIPT LANGUAGE=JSCRIPT>
+	function RollOn() {
+		switch(window.event.srcElement.className) {
+			case 'Err':
+				window.event.srcElement.className = 'ErrH'; break;
+			case 'Warn':
+				window.event.srcElement.className = 'WarnH'; break;
+			case 'Info':
+				window.event.srcElement.className = 'InfoH'; break;
+		}
+	}
+	function RollOff() {
+		switch(window.event.srcElement.className) {
+			case 'ErrH':
+				window.event.srcElement.className = 'Err'; break;
+			case 'WarnH':
+				window.event.srcElement.className = 'Warn'; break;
+			case 'InfoH':
+				window.event.srcElement.className = 'Info'; break;
+		}
+	}
+	function OnError(sMsg,sUrl,sLine) {
+		return true;
+	}
+
+	document.onmouseover = RollOn;
+	document.onmouseout = RollOff;
+	window.onerror = OnError;
+</SCRIPT>
+
+<SCRIPT LANGUAGE=VBSCRIPT>
+
+Function IID_IDispatch
+	IID_IDispatch = "{00020400-0000-0000-C000-000000000046}"
+End Function
+
+Function CLSID_Executor
+	CLSID_Executor = "Aldec.ExePlugIn.Generic.7"
+End Function
+
+
+Sub OpenPlugIn (progid, template, document, element, string)
+
+	Dim executor, command
+
+	Set executor = window.external.aldec.connector.OpenPlugIn(CLSID_Executor, IID_IDispatch)
+
+	command = "?Activate[<"+progid+">][<"+template+">][<"+document+">][<"+element+">][<"+string+">]"
+
+	executor.ExecuteCommand command, ""
+
+End Sub
+
+
+</SCRIPT>
+<!--                                                                         -->
+<!--                             END VBSCRIPT                                -->
+<!----------------------------------------------------------------------------->
+
+<H2>Synthesis&nbsp;Log</H2>
+Created on 19:41:20 09/26/2017
+<HR NOSHADE COLOR="#008080">
+<SPAN class=Info1>Running&nbsp;XST&nbsp;Synthesis...<BR></SPAN>
+<SPAN class=Info1>Please&nbsp;wait...<BR></SPAN>
+<SPAN class=Info1>Release&nbsp;14.2&nbsp;-&nbsp;xst&nbsp;P.28xd&nbsp;(nt64)<BR></SPAN>
+<SPAN class=Info1>Copyright&nbsp;(c)&nbsp;1995-2012&nbsp;Xilinx,&nbsp;Inc.&nbsp;&nbsp;All&nbsp;rights&nbsp;reserved.<BR></SPAN>
+<SPAN class=Info1>--&gt;&nbsp;Parameter&nbsp;TMPDIR&nbsp;set&nbsp;to&nbsp;.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Total&nbsp;REAL&nbsp;time&nbsp;to&nbsp;Xst&nbsp;completion:&nbsp;0.00&nbsp;secs<BR></SPAN>
+<SPAN class=Info1>Total&nbsp;CPU&nbsp;time&nbsp;to&nbsp;Xst&nbsp;completion:&nbsp;0.08&nbsp;secs<BR></SPAN>
+<SPAN class=Info1>&nbsp;<BR></SPAN>
+<SPAN class=Info1>--&gt;&nbsp;Parameter&nbsp;xsthdpdir&nbsp;set&nbsp;to&nbsp;C:\My_Designs\MahoneyFall2017\project1\synthesis\xst<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Total&nbsp;REAL&nbsp;time&nbsp;to&nbsp;Xst&nbsp;completion:&nbsp;0.00&nbsp;secs<BR></SPAN>
+<SPAN class=Info1>Total&nbsp;CPU&nbsp;time&nbsp;to&nbsp;Xst&nbsp;completion:&nbsp;0.08&nbsp;secs<BR></SPAN>
+<SPAN class=Info1>&nbsp;<BR></SPAN>
+<SPAN class=Info1>--&gt;&nbsp;<BR></SPAN>
+<SPAN class=Info1>TABLE&nbsp;OF&nbsp;CONTENTS<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;1)&nbsp;Synthesis&nbsp;Options&nbsp;Summary<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;2)&nbsp;HDL&nbsp;Parsing<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;3)&nbsp;HDL&nbsp;Elaboration<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;4)&nbsp;HDL&nbsp;Synthesis<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4.1)&nbsp;HDL&nbsp;Synthesis&nbsp;Report<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;5)&nbsp;Advanced&nbsp;HDL&nbsp;Synthesis<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5.1)&nbsp;Advanced&nbsp;HDL&nbsp;Synthesis&nbsp;Report<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;6)&nbsp;Low&nbsp;Level&nbsp;Synthesis<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;7)&nbsp;Partition&nbsp;Report<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;8)&nbsp;Design&nbsp;Summary<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.1)&nbsp;Primitive&nbsp;and&nbsp;Black&nbsp;Box&nbsp;Usage<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.2)&nbsp;Device&nbsp;utilization&nbsp;summary<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.3)&nbsp;Partition&nbsp;Resource&nbsp;Summary<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.4)&nbsp;Timing&nbsp;Report<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.4.1)&nbsp;Clock&nbsp;Information<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.4.2)&nbsp;Asynchronous&nbsp;Control&nbsp;Signals&nbsp;Information<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.4.3)&nbsp;Timing&nbsp;Summary<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.4.4)&nbsp;Timing&nbsp;Details<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8.4.5)&nbsp;Cross&nbsp;Clock&nbsp;Domains&nbsp;Report<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Synthesis&nbsp;Options&nbsp;Summary&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>----&nbsp;Source&nbsp;Parameters<BR></SPAN>
+<SPAN class=Info1>Input&nbsp;File&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&quot;project1.prj&quot;<BR></SPAN>
+<SPAN class=Info1>Input&nbsp;Format&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;mixed<BR></SPAN>
+<SPAN class=Info1>Ignore&nbsp;Synthesis&nbsp;Constraint&nbsp;File&nbsp;&nbsp;&nbsp;:&nbsp;no<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>----&nbsp;Target&nbsp;Parameters<BR></SPAN>
+<SPAN class=Info1>Output&nbsp;File&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&quot;project1&quot;<BR></SPAN>
+<SPAN class=Info1>Output&nbsp;Format&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;NGC<BR></SPAN>
+<SPAN class=Info1>Target&nbsp;Device&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;xc7a100tcsg324-3<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>----&nbsp;Source&nbsp;Options<BR></SPAN>
+<SPAN class=Info1>Top&nbsp;Module&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;project1<BR></SPAN>
+<SPAN class=Info1>Generics,&nbsp;Parameters&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;{&nbsp;&nbsp;}<BR></SPAN>
+<SPAN class=Info1>Verilog&nbsp;Macros&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;{&nbsp;&nbsp;}<BR></SPAN>
+<SPAN class=Info1>Automatic&nbsp;FSM&nbsp;Extraction&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>FSM&nbsp;Encoding&nbsp;Algorithm&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;Auto<BR></SPAN>
+<SPAN class=Info1>Resource&nbsp;Sharing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>FSM&nbsp;Style&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;lut<BR></SPAN>
+<SPAN class=Info1>RAM&nbsp;Extraction&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>RAM&nbsp;Style&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;auto<BR></SPAN>
+<SPAN class=Info1>ROM&nbsp;Extraction&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>ROM&nbsp;Style&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;auto<BR></SPAN>
+<SPAN class=Info1>Shift&nbsp;Register&nbsp;Extraction&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>Shift&nbsp;Register&nbsp;Minimum&nbsp;Size&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;2<BR></SPAN>
+<SPAN class=Info1>Use&nbsp;DSP&nbsp;Block&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;auto<BR></SPAN>
+<SPAN class=Info1>Asynchronous&nbsp;To&nbsp;Synchronous&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;no<BR></SPAN>
+<SPAN class=Info1>Automatic&nbsp;Register&nbsp;Balancing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;no<BR></SPAN>
+<SPAN class=Info1>Safe&nbsp;Implementation&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;no<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>----&nbsp;Target&nbsp;Options<BR></SPAN>
+<SPAN class=Info1>Add&nbsp;IO&nbsp;Buffers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>Global&nbsp;Maximum&nbsp;Fanout&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;100000<BR></SPAN>
+<SPAN class=Info1>Add&nbsp;Generic&nbsp;Clock&nbsp;Buffer(BUFG)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;32<BR></SPAN>
+<SPAN class=Info1>Register&nbsp;Duplication&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>Equivalent&nbsp;register&nbsp;Removal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>Pack&nbsp;IO&nbsp;Registers&nbsp;into&nbsp;IOBs&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;auto<BR></SPAN>
+<SPAN class=Info1>LUT&nbsp;Combining&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;auto<BR></SPAN>
+<SPAN class=Info1>Reduce&nbsp;Control&nbsp;Sets&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;auto<BR></SPAN>
+<SPAN class=Info1>Optimize&nbsp;Instantiated&nbsp;Primitives&nbsp;&nbsp;&nbsp;:&nbsp;no<BR></SPAN>
+<SPAN class=Info1>Use&nbsp;Clock&nbsp;Enable&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;auto<BR></SPAN>
+<SPAN class=Info1>Use&nbsp;Synchronous&nbsp;Set&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;auto<BR></SPAN>
+<SPAN class=Info1>Use&nbsp;Synchronous&nbsp;Reset&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;auto<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>----&nbsp;General&nbsp;Options<BR></SPAN>
+<SPAN class=Info1>Optimization&nbsp;Goal&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;speed<BR></SPAN>
+<SPAN class=Info1>Optimization&nbsp;Effort&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;1<BR></SPAN>
+<SPAN class=Info1>Power&nbsp;Reduction&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;no<BR></SPAN>
+<SPAN class=Info1>Global&nbsp;Optimization&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;allclocknets<BR></SPAN>
+<SPAN class=Info1>RTL&nbsp;Output&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>Write&nbsp;Timing&nbsp;Constraints&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;no<BR></SPAN>
+<SPAN class=Info1>Keep&nbsp;Hierarchy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;no<BR></SPAN>
+<SPAN class=Info1>Netlist&nbsp;Hierarchy&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;as_optimized<BR></SPAN>
+<SPAN class=Info1>Hierarchy&nbsp;Separator&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;/<BR></SPAN>
+<SPAN class=Info1>Bus&nbsp;Delimiter&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&lt;&gt;<BR></SPAN>
+<SPAN class=Info1>Case&nbsp;Specifier&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;maintain<BR></SPAN>
+<SPAN class=Info1>Cross&nbsp;Clock&nbsp;Analysis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;no<BR></SPAN>
+<SPAN class=Info1>Slice&nbsp;Utilization&nbsp;Ratio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;100<BR></SPAN>
+<SPAN class=Info1>BRAM&nbsp;Utilization&nbsp;Ratio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;100<BR></SPAN>
+<SPAN class=Info1>DSP48&nbsp;Utilization&nbsp;Ratio&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;100<BR></SPAN>
+<SPAN class=Info1>Read&nbsp;Cores&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;yes<BR></SPAN>
+<SPAN class=Info1>Auto&nbsp;BRAM&nbsp;Packing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;no<BR></SPAN>
+<SPAN class=Info1>Slice&nbsp;Utilization&nbsp;Ratio&nbsp;Delta&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;5<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HDL&nbsp;Parsing&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>Parsing&nbsp;VHDL&nbsp;file&nbsp;&quot;C:\My_Designs\MahoneyFall2017\project1\compile\project1.vhd&quot;&nbsp;into&nbsp;library&nbsp;project1_timing<BR></SPAN>
+<SPAN class=Info1>Parsing&nbsp;entity&nbsp;&lt;project1&gt;.<BR></SPAN>
+<SPAN class=Info1>Parsing&nbsp;architecture&nbsp;&lt;project1&gt;&nbsp;of&nbsp;entity&nbsp;&lt;project1&gt;.<BR></SPAN>
+<SPAN class=Info1>Parsing&nbsp;VHDL&nbsp;file&nbsp;&quot;C:\My_Designs\MahoneyFall2017\project1\src\project1_TB.vhd&quot;&nbsp;into&nbsp;library&nbsp;project1_timing<BR></SPAN>
+<SPAN class=Info1>Parsing&nbsp;entity&nbsp;&lt;project1_TB&gt;.<BR></SPAN>
+<SPAN class=Info1>Parsing&nbsp;architecture&nbsp;&lt;BENCH&gt;&nbsp;of&nbsp;entity&nbsp;&lt;project1_tb&gt;.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HDL&nbsp;Elaboration&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Elaborating&nbsp;entity&nbsp;&lt;project1&gt;&nbsp;(architecture&nbsp;&lt;project1&gt;)&nbsp;from&nbsp;library&nbsp;&lt;project1_timing&gt;.<BR></SPAN>
+<SPAN class=Warn onClick="OpenPlugIn('Aldec.Hde.HdePlugIn.7','-1','"C:\\My_Designs\\MahoneyFall2017\\project1\\compile\\project1.vhd"','','-l=49 -c=1 -tag');">WARNING:HDLCompiler:89&nbsp;-&nbsp;&quot;C:\My_Designs\MahoneyFall2017\project1\compile\project1.vhd&quot;&nbsp;Line&nbsp;49:&nbsp;&lt;and3&gt;&nbsp;remains&nbsp;a&nbsp;black-box&nbsp;since&nbsp;it&nbsp;has&nbsp;no&nbsp;binding&nbsp;entity.<BR></SPAN>
+<SPAN class=Warn onClick="OpenPlugIn('Aldec.Hde.HdePlugIn.7','-1','"C:\\My_Designs\\MahoneyFall2017\\project1\\compile\\project1.vhd"','','-l=66 -c=1 -tag');">WARNING:HDLCompiler:89&nbsp;-&nbsp;&quot;C:\My_Designs\MahoneyFall2017\project1\compile\project1.vhd&quot;&nbsp;Line&nbsp;66:&nbsp;&lt;inv&gt;&nbsp;remains&nbsp;a&nbsp;black-box&nbsp;since&nbsp;it&nbsp;has&nbsp;no&nbsp;binding&nbsp;entity.<BR></SPAN>
+<SPAN class=Warn onClick="OpenPlugIn('Aldec.Hde.HdePlugIn.7','-1','"C:\\My_Designs\\MahoneyFall2017\\project1\\compile\\project1.vhd"','','-l=57 -c=1 -tag');">WARNING:HDLCompiler:89&nbsp;-&nbsp;&quot;C:\My_Designs\MahoneyFall2017\project1\compile\project1.vhd&quot;&nbsp;Line&nbsp;57:&nbsp;&lt;and4&gt;&nbsp;remains&nbsp;a&nbsp;black-box&nbsp;since&nbsp;it&nbsp;has&nbsp;no&nbsp;binding&nbsp;entity.<BR></SPAN>
+<SPAN class=Warn onClick="OpenPlugIn('Aldec.Hde.HdePlugIn.7','-1','"C:\\My_Designs\\MahoneyFall2017\\project1\\compile\\project1.vhd"','','-l=72 -c=1 -tag');">WARNING:HDLCompiler:89&nbsp;-&nbsp;&quot;C:\My_Designs\MahoneyFall2017\project1\compile\project1.vhd&quot;&nbsp;Line&nbsp;72:&nbsp;&lt;or4&gt;&nbsp;remains&nbsp;a&nbsp;black-box&nbsp;since&nbsp;it&nbsp;has&nbsp;no&nbsp;binding&nbsp;entity.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HDL&nbsp;Synthesis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Synthesizing&nbsp;Unit&nbsp;&lt;project1&gt;.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Related&nbsp;source&nbsp;file&nbsp;is&nbsp;&quot;C:\My_Designs\MahoneyFall2017\project1\compile\project1.vhd&quot;.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Summary:<BR></SPAN>
+<SPAN class=Info1>	no&nbsp;macro.<BR></SPAN>
+<SPAN class=Info1>Unit&nbsp;&lt;project1&gt;&nbsp;synthesized.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>HDL&nbsp;Synthesis&nbsp;Report<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Found&nbsp;no&nbsp;macro<BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Advanced&nbsp;HDL&nbsp;Synthesis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>Advanced&nbsp;HDL&nbsp;Synthesis&nbsp;Report<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Found&nbsp;no&nbsp;macro<BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Low&nbsp;Level&nbsp;Synthesis&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Optimizing&nbsp;unit&nbsp;&lt;project1&gt;&nbsp;...<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Mapping&nbsp;all&nbsp;equations...<BR></SPAN>
+<SPAN class=Info1>Building&nbsp;and&nbsp;optimizing&nbsp;final&nbsp;netlist&nbsp;...<BR></SPAN>
+<SPAN class=Info1>Found&nbsp;area&nbsp;constraint&nbsp;ratio&nbsp;of&nbsp;100&nbsp;(+&nbsp;5)&nbsp;on&nbsp;block&nbsp;project1,&nbsp;actual&nbsp;ratio&nbsp;is&nbsp;0.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Final&nbsp;Macro&nbsp;Processing&nbsp;...<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>Final&nbsp;Register&nbsp;Report<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Found&nbsp;no&nbsp;macro<BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Partition&nbsp;Report&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Partition&nbsp;Implementation&nbsp;Status<BR></SPAN>
+<SPAN class=Info1>-------------------------------<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;No&nbsp;Partitions&nbsp;were&nbsp;found&nbsp;in&nbsp;this&nbsp;design.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>-------------------------------<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>*&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Design&nbsp;Summary&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;*<BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Top&nbsp;Level&nbsp;Output&nbsp;File&nbsp;Name&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;project1.ngc<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Primitive&nbsp;and&nbsp;Black&nbsp;Box&nbsp;Usage:<BR></SPAN>
+<SPAN class=Info1>------------------------------<BR></SPAN>
+<SPAN class=Info1>#&nbsp;BELS&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;9<BR></SPAN>
+<SPAN class=Info1>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND3&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;3<BR></SPAN>
+<SPAN class=Info1>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;1<BR></SPAN>
+<SPAN class=Info1>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INV&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;4<BR></SPAN>
+<SPAN class=Info1>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OR4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;1<BR></SPAN>
+<SPAN class=Info1>#&nbsp;IO&nbsp;Buffers&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;5<BR></SPAN>
+<SPAN class=Info1>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IBUF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;4<BR></SPAN>
+<SPAN class=Info1>#&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OBUF&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;1<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Device&nbsp;utilization&nbsp;summary:<BR></SPAN>
+<SPAN class=Info1>---------------------------<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Selected&nbsp;Device&nbsp;:&nbsp;7a100tcsg324-3&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Slice&nbsp;Logic&nbsp;Utilization:&nbsp;<BR></SPAN>
+<SPAN class=Info1>&nbsp;Number&nbsp;of&nbsp;Slice&nbsp;LUTs:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;out&nbsp;of&nbsp;&nbsp;63400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%&nbsp;&nbsp;<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Number&nbsp;used&nbsp;as&nbsp;Logic:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;out&nbsp;of&nbsp;&nbsp;63400&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%&nbsp;&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Slice&nbsp;Logic&nbsp;Distribution:&nbsp;<BR></SPAN>
+<SPAN class=Info1>&nbsp;Number&nbsp;of&nbsp;LUT&nbsp;Flip&nbsp;Flop&nbsp;pairs&nbsp;used:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;Number&nbsp;with&nbsp;an&nbsp;unused&nbsp;Flip&nbsp;Flop:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;out&nbsp;of&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;100%&nbsp;&nbsp;<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;Number&nbsp;with&nbsp;an&nbsp;unused&nbsp;LUT:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;out&nbsp;of&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%&nbsp;&nbsp;<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;fully&nbsp;used&nbsp;LUT-FF&nbsp;pairs:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;&nbsp;out&nbsp;of&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0%&nbsp;&nbsp;<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;Number&nbsp;of&nbsp;unique&nbsp;control&nbsp;sets:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>IO&nbsp;Utilization:&nbsp;<BR></SPAN>
+<SPAN class=Info1>&nbsp;Number&nbsp;of&nbsp;IOs:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5<BR></SPAN>
+<SPAN class=Info1>&nbsp;Number&nbsp;of&nbsp;bonded&nbsp;IOBs:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;5&nbsp;&nbsp;out&nbsp;of&nbsp;&nbsp;&nbsp;&nbsp;210&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2%&nbsp;&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Specific&nbsp;Feature&nbsp;Utilization:<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>---------------------------<BR></SPAN>
+<SPAN class=Info1>Partition&nbsp;Resource&nbsp;Summary:<BR></SPAN>
+<SPAN class=Info1>---------------------------<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;No&nbsp;Partitions&nbsp;were&nbsp;found&nbsp;in&nbsp;this&nbsp;design.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>---------------------------<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>Timing&nbsp;Report<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>NOTE:&nbsp;THESE&nbsp;TIMING&nbsp;NUMBERS&nbsp;ARE&nbsp;ONLY&nbsp;A&nbsp;SYNTHESIS&nbsp;ESTIMATE.<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FOR&nbsp;ACCURATE&nbsp;TIMING&nbsp;INFORMATION&nbsp;PLEASE&nbsp;REFER&nbsp;TO&nbsp;THE&nbsp;TRACE&nbsp;REPORT<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;GENERATED&nbsp;AFTER&nbsp;PLACE-and-ROUTE.<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Clock&nbsp;Information:<BR></SPAN>
+<SPAN class=Info1>------------------<BR></SPAN>
+<SPAN class=Info1>No&nbsp;clock&nbsp;signals&nbsp;found&nbsp;in&nbsp;this&nbsp;design<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Asynchronous&nbsp;Control&nbsp;Signals&nbsp;Information:<BR></SPAN>
+<SPAN class=Info1>----------------------------------------<BR></SPAN>
+<SPAN class=Info1>No&nbsp;asynchronous&nbsp;control&nbsp;signals&nbsp;found&nbsp;in&nbsp;this&nbsp;design<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Timing&nbsp;Summary:<BR></SPAN>
+<SPAN class=Info1>---------------<BR></SPAN>
+<SPAN class=Info1>Speed&nbsp;Grade:&nbsp;-3<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;Minimum&nbsp;period:&nbsp;No&nbsp;path&nbsp;found<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;Minimum&nbsp;input&nbsp;arrival&nbsp;time&nbsp;before&nbsp;clock:&nbsp;No&nbsp;path&nbsp;found<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;Maximum&nbsp;output&nbsp;required&nbsp;time&nbsp;after&nbsp;clock:&nbsp;No&nbsp;path&nbsp;found<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;Maximum&nbsp;combinational&nbsp;path&nbsp;delay:&nbsp;2.665ns<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Timing&nbsp;Details:<BR></SPAN>
+<SPAN class=Info1>---------------<BR></SPAN>
+<SPAN class=Info1>All&nbsp;values&nbsp;displayed&nbsp;in&nbsp;nanoseconds&nbsp;(ns)<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1>Timing&nbsp;constraint:&nbsp;Default&nbsp;path&nbsp;analysis<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Total&nbsp;number&nbsp;of&nbsp;paths&nbsp;/&nbsp;destination&nbsp;ports:&nbsp;13&nbsp;/&nbsp;1<BR></SPAN>
+<SPAN class=Info1>-------------------------------------------------------------------------<BR></SPAN>
+<SPAN class=Info1>Delay:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.665ns&nbsp;(Levels&nbsp;of&nbsp;Logic&nbsp;=&nbsp;5)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Source:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;D&nbsp;(PAD)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Destination:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f_out&nbsp;(PAD)<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;Data&nbsp;Path:&nbsp;D&nbsp;to&nbsp;f_out<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Gate&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Net<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Cell:in-&gt;out&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fanout&nbsp;&nbsp;&nbsp;Delay&nbsp;&nbsp;&nbsp;Delay&nbsp;&nbsp;Logical&nbsp;Name&nbsp;(Net&nbsp;Name)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;----------------------------------------&nbsp;&nbsp;------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;IBUF:I-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;&nbsp;&nbsp;0.001&nbsp;&nbsp;&nbsp;0.293&nbsp;&nbsp;D_IBUF&nbsp;(D_IBUF)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;INV:I-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.511&nbsp;&nbsp;&nbsp;0.693&nbsp;&nbsp;U5&nbsp;(NET228)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AND4:I0-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.097&nbsp;&nbsp;&nbsp;0.693&nbsp;&nbsp;U8&nbsp;(NET90)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OR4:I0-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;1&nbsp;&nbsp;&nbsp;0.097&nbsp;&nbsp;&nbsp;0.279&nbsp;&nbsp;U9&nbsp;(f_out_OBUF)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;OBUF:I-&gt;O&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;0.000&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;f_out_OBUF&nbsp;(f_out)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;----------------------------------------<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;Total&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;2.665ns&nbsp;(0.706ns&nbsp;logic,&nbsp;1.959ns&nbsp;route)<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;(26.5%&nbsp;logic,&nbsp;73.5%&nbsp;route)<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Cross&nbsp;Clock&nbsp;Domains&nbsp;Report:<BR></SPAN>
+<SPAN class=Info1>--------------------------<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>=========================================================================<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Total&nbsp;REAL&nbsp;time&nbsp;to&nbsp;Xst&nbsp;completion:&nbsp;7.00&nbsp;secs<BR></SPAN>
+<SPAN class=Info1>Total&nbsp;CPU&nbsp;time&nbsp;to&nbsp;Xst&nbsp;completion:&nbsp;6.89&nbsp;secs<BR></SPAN>
+<SPAN class=Info1>&nbsp;<BR></SPAN>
+<SPAN class=Info1>--&gt;&nbsp;<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Total&nbsp;memory&nbsp;usage&nbsp;is&nbsp;460880&nbsp;kilobytes<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>Number&nbsp;of&nbsp;errors&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;(&nbsp;&nbsp;&nbsp;0&nbsp;filtered)<BR></SPAN>
+<SPAN class=Info1>Number&nbsp;of&nbsp;warnings&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;4&nbsp;(&nbsp;&nbsp;&nbsp;0&nbsp;filtered)<BR></SPAN>
+<SPAN class=Info1>Number&nbsp;of&nbsp;infos&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;0&nbsp;(&nbsp;&nbsp;&nbsp;0&nbsp;filtered)<BR></SPAN>
+<SPAN class=Info1><BR></SPAN>
+<SPAN class=Info1>INFO:NetListWriters:635&nbsp;-&nbsp;The&nbsp;generated&nbsp;VHDL&nbsp;netlist&nbsp;contains&nbsp;Xilinx&nbsp;UNISIM<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;simulation&nbsp;primitives&nbsp;and&nbsp;has&nbsp;to&nbsp;be&nbsp;used&nbsp;with&nbsp;UNISIM&nbsp;library&nbsp;for&nbsp;correct<BR></SPAN>
+<SPAN class=Info1>&nbsp;&nbsp;&nbsp;compilation&nbsp;and&nbsp;simulation.&nbsp;<BR></SPAN>
+<SPAN class=Warn1>Synthesis&nbsp;finished&nbsp;with&nbsp;4&nbsp;warning(s).<BR></SPAN>
+<SPAN class=Warn1><BR></SPAN>
+
+</FONT>
+</BODY>
+
+</HTML>
+		

@@ -1,0 +1,5 @@
+11
+~E 1 "./../compile/fullAdder.vhd" 35 fullAdder
+~A 1 "./../compile/fullAdder.vhd" 45 fullAdder
+~E 1 "./../src/fullAdder_TB.vhd" 5 fullAdder_TB
+~A 1 "./../src/fullAdder_TB.vhd" 9 BENCH

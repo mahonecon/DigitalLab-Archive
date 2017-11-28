@@ -1,0 +1,39 @@
+Release 14.2 ngdbuild P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+
+Command Line: C:\Xilinx\14.2\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe -p
+7A100TCSG324-3 -sd C:\My_Designs\MahoneyFall2017\project1\synthesis -sd
+C:\My_Designs\MahoneyFall2017\project1\compile -sd
+C:\My_Designs\MahoneyFall2017\project1\src -sd C:\Aldec\Active-HDL
+9.3\vlib\ARTIX7\compile -uc project1.ucf project1.ngc project1.ngd
+
+Reading NGO file
+"C:/My_Designs/MahoneyFall2017/project1/implement/ver1/rev1/project1.ngc" ...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "project1.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   0
+
+Total memory usage is 213476 kilobytes
+
+Writing NGD file "project1.ngd" ...
+Total REAL time to NGDBUILD completion:  5 sec
+Total CPU time to NGDBUILD completion:   5 sec
+
+Writing NGDBUILD log file "project1.bld"...

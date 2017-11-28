@@ -1,0 +1,51 @@
+# DESIGN: Default Design Language: VHDL
+# DESIGN: Default BDE Language: VHDL
+# DESIGN: C-Synthesis: Not Defined
+# DESIGN: HDL Synthesis: Xilinx ISE/WebPack 14.2 XST VHDL/Verilog
+# DESIGN: Physical Synthesis: Not Defined
+# DESIGN: Implementation: Xilinx ISE/WebPack 14.2
+acom -reorder -O3 -work FSM -2002  $dsn/src/FSM.vhd
+# Compile with File Reorder...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Designs\MahoneyFall2017\FSM\src\FSM.vhd
+# Compile Entity "FSM"
+# Compile Architecture "behavior" of Entity "FSM"
+# Error: COMP96_0019: FSM.vhd : (77, 1): Keyword 'end' expected.
+# Error: COMP96_0016: FSM.vhd : (77, 5): Design unit declaration expected.
+# Error: COMP96_0019: FSM.vhd : (97, 26): Keyword 'of' expected.
+# Error: COMP96_0018: FSM.vhd : (97, 26): Identifier expected.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -work FSM -2002  $dsn/src/FSM.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Designs\MahoneyFall2017\FSM\src\FSM.vhd
+# Compile Entity "FSM"
+# Compile Architecture "behavior" of Entity "FSM"
+# Error: COMP96_0019: FSM.vhd : (77, 1): Keyword 'end' expected.
+# Error: COMP96_0016: FSM.vhd : (77, 5): Design unit declaration expected.
+# Error: COMP96_0019: FSM.vhd : (97, 26): Keyword 'of' expected.
+# Error: COMP96_0018: FSM.vhd : (97, 26): Identifier expected.
+# Compile failure 4 Errors 0 Warnings  Analysis time :  0.0 [ms]
+acom -O3 -work FSM -2002  $dsn/src/FSM.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Designs\MahoneyFall2017\FSM\src\FSM.vhd
+# Compile Entity "FSM"
+# Compile Architecture "behavior" of Entity "FSM"
+# Error: COMP96_0016: FSM.vhd : (78, 1): Design unit declaration expected.
+# Error: COMP96_0019: FSM.vhd : (98, 26): Keyword 'of' expected.
+# Error: COMP96_0018: FSM.vhd : (98, 26): Identifier expected.
+# Compile failure 3 Errors 0 Warnings  Analysis time :  0.1 [s]
+acom -O3 -work FSM -2002  $dsn/src/FSM.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\My_Designs\MahoneyFall2017\FSM\src\FSM.vhd
+# Compile Entity "FSM"
+# Compile Architecture "behavior" of Entity "FSM"
+# Error: COMP96_0016: FSM.vhd : (80, 1): Design unit declaration expected.
+# Error: COMP96_0019: FSM.vhd : (98, 26): Keyword 'of' expected.
+# Error: COMP96_0018: FSM.vhd : (98, 26): Identifier expected.
+# Compile failure 3 Errors 0 Warnings  Analysis time :  0.1 [s]
+# Design: Design "fulladder" has been set as active.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].

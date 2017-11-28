@@ -1,0 +1,8 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
+MESSAGE "File: c:\My_Designs\MahoneyFall2017\FSM\src\FSM.vhd" 
+MESSAGE "Compile Entity "FSM"" 
+MESSAGE "Compile Architecture "behavior" of Entity "FSM"" 
+ERROR COMP96_0016: "Design unit declaration expected." "c:\My_Designs\MahoneyFall2017\FSM\src\FSM.vhd" 80 1
+ERROR COMP96_0019: "Keyword 'of' expected." "c:\My_Designs\MahoneyFall2017\FSM\src\FSM.vhd" 98 26
+ERROR COMP96_0018: "Identifier expected." "c:\My_Designs\MahoneyFall2017\FSM\src\FSM.vhd" 98 26
+FAILURE "Compile failure 3 Errors 0 Warnings  Analysis time :  0.1 [s]" 

@@ -1,0 +1,5 @@
+28
+~E 1 "./../src/fullAdder.vhd" 8 fullAdder
+~A 1 "./../src/fullAdder.vhd" 18 behavior
+~E 1 "./../src/fullAdder_TB.vhd" 5 fullAdder_TB
+~A 1 "./../src/fullAdder_TB.vhd" 9 BENCH

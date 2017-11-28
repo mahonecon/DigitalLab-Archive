@@ -1,0 +1,37 @@
+Active-HDL 9.3.2744.4995  2017-11-14 18:45:38
+
+Elaboration top modules:
+Architecture                  Structure(project1)
+
+
+---------------------------------------------------------------------------------------------------------
+Entity   | Architecture | Library         | Info | Compiler Version                | Compilation Options
+---------------------------------------------------------------------------------------------------------
+project1 | Structure    | project1_timing |      | 9.3.2744.4995  (Windows)        | -O3
+x_obuf   | x_obuf_v     | simprim         |      | 9.3.2744.sp1.09.4995  (Windows) | -vendor xilinx
+x_buf    | x_buf_v      | simprim         |      | 9.3.2744.sp1.09.4995  (Windows) | -vendor xilinx
+x_lut6   | x_lut6_v     | simprim         |      | 9.3.2744.sp1.09.4995  (Windows) | -vendor xilinx
+x_roc    | x_roc_v      | simprim         |      | 9.3.2744.sp1.09.4995  (Windows) | -vendor xilinx
+x_toc    | x_toc_v      | simprim         |      | 9.3.2744.sp1.09.4995  (Windows) | -vendor xilinx
+---------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------
+VHDL Package            | Library         | Info | Compiler Version                | Compilation Options
+---------------------------------------------------------------------------------------------------------
+standard                | std             |      |                                 | 
+TEXTIO                  | std             |      | 9.3.2744.4995  (Windows)        |  -2008
+std_logic_1164          | ieee            |      | 9.3.2744.4995  (Windows)        |  -2008
+VITAL_Timing            | ieee            |      | 9.3.2744.4995  (Windows)        | 
+VITAL_Primitives        | ieee            |      | 9.3.2744.4995  (Windows)        | 
+VCOMPONENTS             | simprim         |      | 9.3.2744.sp1.09.4995  (Windows) | -vendor xilinx
+VPACKAGE                | simprim         |      | 9.3.2744.sp1.09.4995  (Windows) | -vendor xilinx
+---------------------------------------------------------------------------------------------------------
+
+---------------------------------------------------------------------------------------------------------
+Library                 | Comment
+---------------------------------------------------------------------------------------------------------
+ieee                    | Standard IEEE packages library
+project1_timing         | None
+simprim                 | XILINX ISE 13.4, SIMPRIM VHDL LIBRARY
+std                     | Standard VHDL library
+---------------------------------------------------------------------------------------------------------

@@ -1,0 +1,4 @@
+.\src\project1.bde
+.\src\project1_TB.vhd
+.\synthesis\project1.vhd
+.\IMPLEMENT\TIME_SIM.VHD

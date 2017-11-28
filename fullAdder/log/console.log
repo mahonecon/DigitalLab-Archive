@@ -1,0 +1,216 @@
+# Design: Design fullAdder already active.
+# 
+# DESIGN: Default Design Language: VHDL
+# DESIGN: Default BDE Language: VHDL
+# DESIGN: C-Synthesis: Not Defined
+# DESIGN: HDL Synthesis: Xilinx ISE/WebPack 14.2 XST VHDL/Verilog
+# DESIGN: Physical Synthesis: Not Defined
+# DESIGN: Implementation: Xilinx ISE/WebPack 14.2
+acom -reorder -O3 -work fullAdder -2002  $dsn/src/fullAdder.vhd
+# Compile with File Reorder...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\my_design\MahoneyFall2017\fullAdder\src\fullAdder.vhd
+# Compile Entity "fullAdder"
+# Compile Architecture "behavior" of Entity "fullAdder"
+# Top-level unit(s) detected:
+# Entity => fullAdder
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+acom -O3 -work fullAdder -2002  $dsn/src/fullAdder.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\my_design\MahoneyFall2017\fullAdder\src\fullAdder.vhd
+# Compile Entity "fullAdder"
+# Error: COMP96_0016: fullAdder.vhd : (21, 1): Design unit declaration expected.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  16.0 [ms]
+acom -O3 -work fullAdder -2002  $dsn/src/fullAdder.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\my_design\MahoneyFall2017\fullAdder\src\fullAdder.vhd
+# Compile Entity "fullAdder"
+# Error: COMP96_0016: fullAdder.vhd : (21, 1): Design unit declaration expected.
+# Compile failure 1 Errors 0 Warnings  Analysis time :  15.0 [ms]
+acom -O3 -work fullAdder -2002  $dsn/src/fullAdder.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\my_design\MahoneyFall2017\fullAdder\src\fullAdder.vhd
+# Compile Entity "fullAdder"
+# Compile Architecture "behavior" of Entity "fullAdder"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+# There are no files to simulate. Use "Functional Simulation Options" dialog to specify file(s).
+# Top-level unit has not been specified for simulation. Use "Functional Simulation Options" dialog box to specify top-level.
+asim +access +r -advdataflow fullAdder
+# Warning: Verilog Optimization cannot be used when -advdataflow is in effect. Verilog Optimization disabled.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6825 kB (elbread=1023 elab2=5652 kernel=149 sdf=0)
+# KERNEL: ASDB file was created in location c:\my_design\MahoneyFall2017\fullAdder\src\wave.asdb
+#  7:03 PM, Tuesday, September 12, 2017
+#  Simulation has been initialized
+#  Selected Top-Level: fullAdder (behavior)
+asim +access +r -advdataflow fullAdder
+# Warning: Verilog Optimization cannot be used when -advdataflow is in effect. Verilog Optimization disabled.
+#  Simulation has been stopped
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6825 kB (elbread=1023 elab2=5652 kernel=149 sdf=0)
+# KERNEL: ASDB file was created in location c:\my_design\MahoneyFall2017\fullAdder\src\wave.asdb
+#  7:04 PM, Tuesday, September 12, 2017
+#  Simulation has been initialized
+#  Selected Top-Level: fullAdder (behavior)
+wave
+# Waveform file 'untitled.awc' connected to 'c:/my_design/MahoneyFall2017/fullAdder/src/wave.asdb'.
+wave  /fullAdder/*
+# 5 signal(s) traced.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+endsim
+#  Simulation has been stopped
+acom -O3 -work fullAdder -2002  $dsn/src/fullAdder_TB.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\my_design\MahoneyFall2017\fullAdder\src\fullAdder_TB.vhd
+# Compile Entity "fullAdder_TB"
+# Compile Architecture "BENCH" of Entity "fullAdder_TB"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+asim +access +r -advdataflow fullAdder
+# Warning: Verilog Optimization cannot be used when -advdataflow is in effect. Verilog Optimization disabled.
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6825 kB (elbread=1023 elab2=5652 kernel=149 sdf=0)
+# KERNEL: ASDB file was created in location c:\my_design\MahoneyFall2017\fullAdder\src\wave.asdb
+#  7:31 PM, Tuesday, September 12, 2017
+#  Simulation has been initialized
+#  Selected Top-Level: fullAdder (behavior)
+# Waveform file 'untitled.awc' connected to 'c:/my_design/MahoneyFall2017/fullAdder/src/wave.asdb'.
+wave
+# Waveform file 'untitled.awc' connected to 'c:/my_design/MahoneyFall2017/fullAdder/src/wave.asdb'.
+wave  /fullAdder/*
+# 5 signal(s) traced.
+asim +access +r -advdataflow fullAdder_TB
+# Warning: Verilog Optimization cannot be used when -advdataflow is in effect. Verilog Optimization disabled.
+#  Simulation has been stopped
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6828 kB (elbread=1023 elab2=5655 kernel=149 sdf=0)
+# KERNEL: ASDB file was created in location c:\my_design\MahoneyFall2017\fullAdder\src\wave.asdb
+#  7:31 PM, Tuesday, September 12, 2017
+#  Simulation has been initialized
+#  Selected Top-Level: fullAdder_TB (BENCH)
+# Waveform file 'untitled.awc' connected to 'c:/my_design/MahoneyFall2017/fullAdder/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'c:/my_design/MahoneyFall2017/fullAdder/src/wave.asdb'.
+wave
+# Waveform file 'untitled.awc' connected to 'c:/my_design/MahoneyFall2017/fullAdder/src/wave.asdb'.
+wave  /fullAdder_TB/*
+# 5 signal(s) traced.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+acom -O3 -work fullAdder -2002  $dsn/src/fullAdder_TB.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\my_design\MahoneyFall2017\fullAdder\src\fullAdder_TB.vhd
+# Compile Entity "fullAdder_TB"
+# Compile Architecture "BENCH" of Entity "fullAdder_TB"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+asim +access +r -advdataflow fullAdder_TB
+# Warning: Verilog Optimization cannot be used when -advdataflow is in effect. Verilog Optimization disabled.
+#  Simulation has been stopped
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# asim: Stack memory: 32MB
+# asim: Retval memory: 32MB
+# 
+# KERNEL: Main thread initiated.
+# KERNEL: Kernel process initialization phase.
+# KERNEL: Time resolution set to 1ps.
+# ELAB2: Elaboration final pass...
+# ELAB2: Create instances ...
+# ELAB2: Create instances complete.
+# ELAB2: Elaboration final pass complete - time: 0.0 [s].
+# KERNEL: Warning: You are using the Active-HDL EDU Edition. The performance of simulation is running at a reduced rate.
+# KERNEL: Warning: Contact Aldec for available upgrade options - sales@aldec.com.
+# KERNEL: Kernel process initialization done.
+# Allocation: Simulator allocated 6828 kB (elbread=1023 elab2=5655 kernel=149 sdf=0)
+# KERNEL: ASDB file was created in location c:\my_design\MahoneyFall2017\fullAdder\src\wave.asdb
+#  7:36 PM, Tuesday, September 12, 2017
+#  Simulation has been initialized
+#  Selected Top-Level: fullAdder_TB (BENCH)
+# Waveform file 'untitled.awc' connected to 'c:/my_design/MahoneyFall2017/fullAdder/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'c:/my_design/MahoneyFall2017/fullAdder/src/wave.asdb'.
+# Waveform file 'untitled.awc' connected to 'c:/my_design/MahoneyFall2017/fullAdder/src/wave.asdb'.
+wave
+# Waveform file 'untitled.awc' connected to 'c:/my_design/MahoneyFall2017/fullAdder/src/wave.asdb'.
+wave  /fullAdder_TB/*
+# 5 signal(s) traced.
+run
+# KERNEL: Simulation has finished. There are no more test vectors to simulate.
+acom -O3 -work fullAdder -2002  $dsn/src/fullAdder_TB.vhd
+# Compile...
+# Warning: DAGGEN_0523: The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available.
+# File: c:\my_design\MahoneyFall2017\fullAdder\src\fullAdder_TB.vhd
+# Compile Entity "fullAdder_TB"
+# Compile Architecture "BENCH" of Entity "fullAdder_TB"
+# Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]
+#  Simulation has been stopped
+# Design: 7:37 PM, Tuesday, September 12, 2017
+# Design: Opening design "c:\my_design\MahoneyFall2017\fullAdder1\fullAdder1.adf"
+# ELBREAD: Elaboration process.
+# ELBREAD: Elaboration time 0.0 [s].
+# Design: Design "fullAdder1" has been set as active.

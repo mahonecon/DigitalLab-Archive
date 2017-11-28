@@ -1,0 +1,1 @@
+-w -s "C:\My_Designs\MahoneyFall2017\library.cfg"  -j "C:\My_Designs\MahoneyFall2017\project1\projlib.cfg"  -d "C:\My_Designs\MahoneyFall2017\project1\compile"   -work project1_timing  -O3 -e 100 "C:\My_Designs\MahoneyFall2017\project1\IMPLEMENT\TIME_SIM.VHD"

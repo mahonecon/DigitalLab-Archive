@@ -1,0 +1,76 @@
+(DELAYFILE
+  (SDFVERSION "3.0")
+  (DESIGN "project1")
+  (DATE "Tue Sep 26 19:42:59 2017")
+  (VENDOR "Xilinx")
+  (PROGRAM "Xilinx SDF Writer")
+  (VERSION "P.28xd")
+  (DIVIDER /)
+  (VOLTAGE 0.95)
+  (TEMPERATURE 85)
+  (TIMESCALE 1 ps)
+  (CELL (CELLTYPE "X_OBUF")
+    (INSTANCE f_out_OBUF)
+      (DELAY
+        (ABSOLUTE
+          (PORT I ( 0 )( 0 ))
+          (IOPATH I O (1524:4062:4062)(1524:4062:4062))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_BUF")
+    (INSTANCE A_IBUF)
+      (DELAY
+        (ABSOLUTE
+          (IOPATH I O (873:1981:1981)(873:1981:1981))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_BUF")
+    (INSTANCE B_IBUF)
+      (DELAY
+        (ABSOLUTE
+          (IOPATH I O (873:1981:1981)(873:1981:1981))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_BUF")
+    (INSTANCE C_IBUF)
+      (DELAY
+        (ABSOLUTE
+          (IOPATH I O (873:1981:1981)(873:1981:1981))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_BUF")
+    (INSTANCE D_IBUF)
+      (DELAY
+        (ABSOLUTE
+          (IOPATH I O (873:1981:1981)(873:1981:1981))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_LUT6")
+    (INSTANCE U9)
+      (DELAY
+        (ABSOLUTE
+          (PORT ADR5 (503:503:903)(503:503:903))
+          (PORT ADR2 (523:523:990)(523:523:990))
+          (PORT ADR0 (596:596:1145)(596:596:1145))
+          (PORT ADR1 (553:553:1084)(553:553:1084))
+          (IOPATH ADR5 O (45:97:97)(45:97:97))
+          (IOPATH ADR2 O (45:97:97)(45:97:97))
+          (IOPATH ADR0 O (45:97:97)(45:97:97))
+          (IOPATH ADR1 O (45:97:97)(45:97:97))
+        )
+      )
+  )
+  (CELL (CELLTYPE "X_BUF")
+    (INSTANCE NlwBufferBlock_f_out_OBUF_I)
+      (DELAY
+        (ABSOLUTE
+          (IOPATH I O (390:390:1102)(390:390:1102))
+        )
+      )
+  )
+)

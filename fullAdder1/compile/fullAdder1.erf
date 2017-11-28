@@ -1,0 +1,5 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
+MESSAGE "File: c:\my_design\MahoneyFall2017\fullAdder1\src\fullAdder_TB.vhd" 
+MESSAGE "Compile Entity "fullAdder_TB"" 
+MESSAGE "Compile Architecture "BENCH" of Entity "fullAdder_TB"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

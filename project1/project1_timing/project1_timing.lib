@@ -1,0 +1,23 @@
+timestamp=1506468138625
+
+[project1]
+A/structure=A/Structure 21|./../IMPLEMENT/TIME_SIM.VHD|51|1*0
+I=0*658
+I/structure=I/Structure 0*2373
+M=11|0|vb4|1506468138604|./../IMPLEMENT/TIME_SIM.VHD|0*221*0x2138626851d3f35d0dd88a5c4ee3b3edf4e1a64f|0*571*0x5eebbfaf24833dd780412b1f91e05209
+M/structure=M/Structure 21|0|vb4|1506468138609|./../IMPLEMENT/TIME_SIM.VHD|0*886*0xa33c185e85062dba883fc739aafdec5fee2bfaaa|0*2273*0x856b180bf611ec746a6bfcb1befebd18
+R=./../IMPLEMENT/TIME_SIM.VHD|41
+Version=9.3.2744.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/structure=9.3.2744.4995  (Windows)|00000003789cd3f5370600015b00b0
+
+[~A]
+ModifyID=2
+Version=73
+
+[~MFT]
+0=6|0project1_timing.mgf|2373|0
+1=0|1project1_timing.mgf|0|0
+
+[~U]
+project1=11|0*0|
+

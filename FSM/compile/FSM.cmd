@@ -1,0 +1,1 @@
+-w -s "c:\My_Designs\MahoneyFall2017\library.cfg"  -j "c:\My_Designs\MahoneyFall2017\FSM\projlib.cfg"  -d "c:\My_Designs\MahoneyFall2017\FSM\compile"   -work FSM  -O3 -e 100 -2002 "c:\My_Designs\MahoneyFall2017\FSM\src\FSM.vhd"

@@ -1,0 +1,37 @@
+timestamp=1505259421243
+
+[fulladder]
+A/behavior=21|./../src/fullAdder.vhd|18|1*1580
+BinI32/behavior=3*0
+I=0*584
+I/behavior=0*1191
+M=11|0|vb4|1505257123274|./../src/fullAdder.vhd|0*210*0xe6db63547806b56ffcffcc51da5ad3d68b9df626|0*501*0x5eebbfaf24833dd780412b1f91e05209
+M/behavior=21|0|vb4|1505257148547|./../src/fullAdder.vhd|0*821*0x5f85ba95824bc463b478b15ef1bb374d54fb5eb5|0*1096*0x856b180bf611ec746a6bfcb1befebd18
+R=./../src/fullAdder.vhd|8
+Version=9.3.2744.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/behavior=9.3.2744.4995  (Windows)|00000003789cd3f5370600015b00b0
+
+[fulladder_tb]
+A/bench=A/BENCH 21|./../src/fullAdder_TB.vhd|9|1*7242
+BinI32/bench=3*326
+I=0*1782
+I/bench=I/BENCH 0*6234
+M=11|0|vb4|1505259051826|./../src/fullAdder_TB.vhd|0*1519*0x78c1cc6a23cb176f6a09dda495d8593ae571c88d|0*1693*0x5eebbfaf24833dd780412b1f91e05209
+M/bench=M/BENCH 21|0|vb4|1505259421094|./../src/fullAdder_TB.vhd|0*4898*0x625890467d7385ce57a3bad6fe470d357fd56874|0*6136*0x856b180bf611ec746a6bfcb1befebd18
+R=./../src/fullAdder_TB.vhd|5
+Version=9.3.2744.4995  (Windows)|00000003789cd3f5370600015b00b0
+Version/bench=9.3.2744.4995  (Windows)|00000003789cd3f5370600015b00b0
+
+[~A]
+ModifyID=28
+Version=73
+
+[~MFT]
+0=27|0fullAdder.mgf|6234|3010
+1=7|1fullAdder.mgf|7242|5662
+3=5|3fullAdder.mgf|326|0
+
+[~U]
+fulladder=fullAdder 11|0*0|
+fulladder_tb=fullAdder_TB 11|0*1437|
+

@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=C:\My_Designs\MahoneyFall2017\project1\implement\ver1\rev1\project1.ncd
+OUTFILE=C:\My_Designs\MahoneyFall2017\project1\implement\ver1\rev1\project1.bit
+FAMILY=Artix7
+PART=xc7a100t-3csg324
+WORKINGDIR=C:\My_Designs\MahoneyFall2017\project1\implement\ver1\rev1
+LICENSE=WebPack
+USER_INFO=176155395_1777507842_0_352

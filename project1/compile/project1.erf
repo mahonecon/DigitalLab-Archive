@@ -1,0 +1,5 @@
+WARNING DAGGEN_0523: "The source is compiled without the -dbg switch. Line breakpoints and assertion debug will not be available."
+MESSAGE "File: C:\My_Designs\MahoneyFall2017\project1\src\project1_TB.vhd" 
+MESSAGE "Compile Entity "project1_TB"" 
+MESSAGE "Compile Architecture "BENCH" of Entity "project1_TB"" 
+SUCCESS "Compile success 0 Errors 0 Warnings  Analysis time :  0.1 [s]" 

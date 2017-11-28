@@ -1,0 +1,12 @@
+//! **************************************************************************
+// Written by: Map P.28xd on Tue Sep 26 19:42:07 2017
+//! **************************************************************************
+
+SCHEMATIC START;
+COMP "f_out" LOCATE = SITE "T8" LEVEL 1;
+COMP "A" LOCATE = SITE "U9" LEVEL 1;
+COMP "B" LOCATE = SITE "U8" LEVEL 1;
+COMP "C" LOCATE = SITE "R7" LEVEL 1;
+COMP "D" LOCATE = SITE "R6" LEVEL 1;
+SCHEMATIC END;
+

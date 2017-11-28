@@ -1,0 +1,1 @@
+-w -s "c:\my_design\MahoneyFall2017\library.cfg"  -j "c:\my_design\MahoneyFall2017\fullAdder\projlib.cfg"  -d "c:\my_design\MahoneyFall2017\fullAdder\compile"   -work fullAdder  -O3 -e 100 -2002 "c:\my_design\MahoneyFall2017\fullAdder\src\fullAdder_TB.vhd"

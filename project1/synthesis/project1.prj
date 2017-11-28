@@ -1,0 +1,2 @@
+vhdl project1_timing "..\compile\project1.vhd"
+vhdl project1_timing "..\src\project1_TB.vhd"

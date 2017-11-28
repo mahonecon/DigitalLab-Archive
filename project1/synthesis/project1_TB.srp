@@ -1,0 +1,131 @@
+Release 14.2 - xst P.28xd (nt64)
+Copyright (c) 1995-2012 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to .
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.07 secs
+ 
+--> Parameter xsthdpdir set to C:\My_Designs\MahoneyFall2017\project1\synthesis\xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.08 secs
+ 
+--> 
+TABLE OF CONTENTS
+  1) Synthesis Options Summary
+  2) HDL Parsing
+  3) HDL Elaboration
+  4) HDL Synthesis
+       4.1) HDL Synthesis Report
+  5) Advanced HDL Synthesis
+       5.1) Advanced HDL Synthesis Report
+  6) Low Level Synthesis
+  7) Partition Report
+  8) Design Summary
+       8.1) Primitive and Black Box Usage
+       8.2) Device utilization summary
+       8.3) Partition Resource Summary
+       8.4) Timing Report
+            8.4.1) Clock Information
+            8.4.2) Asynchronous Control Signals Information
+            8.4.3) Timing Summary
+            8.4.4) Timing Details
+            8.4.5) Cross Clock Domains Report
+
+
+=========================================================================
+*                      Synthesis Options Summary                        *
+=========================================================================
+---- Source Parameters
+Input File Name                    : "project1_TB.prj"
+Input Format                       : mixed
+Ignore Synthesis Constraint File   : no
+
+---- Target Parameters
+Output File Name                   : "project1_TB"
+Output Format                      : NGC
+Target Device                      : xc7a100tcsg324-3
+
+---- Source Options
+Top Module Name                    : project1_TB
+Generics, Parameters               : {  }
+Verilog Macros                     : {  }
+Automatic FSM Extraction           : yes
+FSM Encoding Algorithm             : Auto
+Resource Sharing                   : yes
+FSM Style                          : lut
+RAM Extraction                     : yes
+RAM Style                          : auto
+ROM Extraction                     : yes
+ROM Style                          : auto
+Shift Register Extraction          : yes
+Shift Register Minimum Size        : 2
+Use DSP Block                      : auto
+Asynchronous To Synchronous        : no
+Automatic Register Balancing       : no
+Safe Implementation                : no
+
+---- Target Options
+Add IO Buffers                     : yes
+Global Maximum Fanout              : 100000
+Add Generic Clock Buffer(BUFG)     : 32
+Register Duplication               : yes
+Equivalent register Removal        : yes
+Pack IO Registers into IOBs        : auto
+LUT Combining                      : auto
+Reduce Control Sets                : auto
+Optimize Instantiated Primitives   : no
+Use Clock Enable                   : auto
+Use Synchronous Set                : auto
+Use Synchronous Reset              : auto
+
+---- General Options
+Optimization Goal                  : speed
+Optimization Effort                : 1
+Power Reduction                    : no
+Global Optimization                : allclocknets
+RTL Output                         : yes
+Write Timing Constraints           : no
+Keep Hierarchy                     : no
+Netlist Hierarchy                  : as_optimized
+Hierarchy Separator                : /
+Bus Delimiter                      : <>
+Case Specifier                     : maintain
+Cross Clock Analysis               : no
+Slice Utilization Ratio            : 100
+BRAM Utilization Ratio             : 100
+DSP48 Utilization Ratio            : 100
+Read Cores                         : yes
+Auto BRAM Packing                  : no
+Slice Utilization Ratio Delta      : 5
+
+=========================================================================
+
+
+=========================================================================
+*                          HDL Parsing                                  *
+=========================================================================
+Parsing VHDL file "C:\My_Designs\MahoneyFall2017\project1\compile\project1.vhd" into library project1_timing
+Parsing entity <project1>.
+Parsing architecture <project1> of entity <project1>.
+Parsing VHDL file "C:\My_Designs\MahoneyFall2017\project1\src\project1_TB.vhd" into library project1_timing
+Parsing entity <project1_TB>.
+Parsing architecture <BENCH> of entity <project1_tb>.
+
+=========================================================================
+*                            HDL Elaboration                            *
+=========================================================================
+
+Elaborating entity <project1_TB> (architecture <BENCH>) from library <project1_timing>.
+ERROR:HDLCompiler:890 - "C:\My_Designs\MahoneyFall2017\project1\src\project1_TB.vhd" Line 28: wait statement without UNTIL clause not supported for synthesis
+Netlist project1_TB(BENCH) remains a blackbox, due to errors in its contents
+--> 
+
+Total memory usage is 256788 kilobytes
+
+Number of errors   :    1 (   0 filtered)
+Number of warnings :    0 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

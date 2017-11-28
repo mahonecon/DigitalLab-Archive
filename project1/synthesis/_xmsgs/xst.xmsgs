@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="warning" file="HDLCompiler" num="89" delta="old" >"C:\My_Designs\MahoneyFall2017\project1\compile\project1.vhd" Line 49: &lt;<arg fmt="%s" index="1">and3</arg>&gt; remains a black-box since it has no binding entity.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="89" delta="old" >"C:\My_Designs\MahoneyFall2017\project1\compile\project1.vhd" Line 66: &lt;<arg fmt="%s" index="1">inv</arg>&gt; remains a black-box since it has no binding entity.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="89" delta="old" >"C:\My_Designs\MahoneyFall2017\project1\compile\project1.vhd" Line 57: &lt;<arg fmt="%s" index="1">and4</arg>&gt; remains a black-box since it has no binding entity.
+</msg>
+
+<msg type="warning" file="HDLCompiler" num="89" delta="old" >"C:\My_Designs\MahoneyFall2017\project1\compile\project1.vhd" Line 72: &lt;<arg fmt="%s" index="1">or4</arg>&gt; remains a black-box since it has no binding entity.
+</msg>
+
+</messages>
+

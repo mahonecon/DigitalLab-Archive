@@ -1,0 +1,5 @@
+17
+~E 1 "./../compile/project1.vhd" 35 project1
+~A 1 "./../compile/project1.vhd" 45 project1
+~E 1 "./../src/project1_TB.vhd" 5 project1_TB
+~A 1 "./../src/project1_TB.vhd" 9 BENCH
